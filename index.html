@@ -406,7 +406,9 @@
       const Tc = (rT.left - tr.left) / fs + (sT.l + sT.r) / 2;
       const Lc = (rL.left - tr.left) / fs + (sL.l + sL.r) / 2;
       const ind = pad + (Tc - Lc);
-      title.style.setProperty('--ind', ind.toFixed(4) + 'em');
+      // Se redondea a píxeles reales de la pantalla (en el iPhone medio píxel de diferencia se notaba en la unión)
+      const dpr = window.devicePixelRatio || 1, indSnap = Math.round(ind * fs * dpr) / dpr / fs;
+      title.style.setProperty('--ind', indSnap.toFixed(4) + 'em');
       // Pieza de unión: mismo ancho que el palo de la T, entre la base de PORTA y la parte alta de FOLIO
       // Medidas verticales por maquetación (no cambian mientras corre la animación de entrada)
       const desc = m.fontBoundingBoxDescent / 400, lh = parseFloat(getComputedStyle(lines[0]).lineHeight) / fs, half = (lh - (asc + desc)) / 2;
@@ -418,6 +420,8 @@
       link.style.setProperty('--lk-h', (capTop2 - base1 + 0.12).toFixed(4) + 'em');
     }
     (document.fonts && document.fonts.load ? document.fonts.load('600 100px Antonio') : Promise.resolve()).then(() => document.fonts.ready).then(align).catch(() => {});
+    // Terminada la entrada se quitan las animaciones: así Safari dibuja T y L sin capas separadas y la unión queda continua
+    setTimeout(() => title.classList.add('done'), 0.25 * 1000 + n * 80 + 700);
   })();
 
   // Manita que saluda: una vez al aparecer la sección, y de nuevo al pasar el mouse, tocarla o con el teclado

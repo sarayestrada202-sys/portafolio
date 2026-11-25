@@ -395,3 +395,7 @@ section { position: relative; }
 .vid.vertical .vid-frame { margin: 14px auto 0; border-radius: 14px; overflow: hidden; }
 .vid.vertical .vid-body { padding-top: 16px; }
 .vid.vertical .vid-frame { max-width: calc(100% - 28px); }
+
+/* Título ya animado: texto estático y nítido (evita desajustes de subpíxel en Safari/iPhone) */
+.hero .hero-title.done .ch { animation: none; opacity: 1; }
+.hero .hero-title { text-rendering: geometricPrecision; -webkit-font-smoothing: antialiased; }
