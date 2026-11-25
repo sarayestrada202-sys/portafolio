@@ -403,3 +403,9 @@ section { position: relative; }
 /* Videos: el redondeo va en el propio video (Safari/iPhone no reproduce bien dentro de un contenedor recortado) */
 .vid.vertical .vid-frame { overflow: visible; }
 .vid-frame video { border-radius: 14px; }
+
+/* Móvil: certificación siempre a la izquierda y plataforma siempre a la derecha (si es larga, baja de línea en su columna) */
+@media (max-width: 900px) {
+  .certs li { display: grid; grid-template-columns: minmax(0, 1fr) fit-content(42%); align-items: center; column-gap: 14px; }
+  .certs li span { text-align: right; line-height: 1.45; }
+}
