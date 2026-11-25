@@ -254,15 +254,15 @@
     <p class="center muted vid-sub">Dale play y mira cómo se ven en acción.</p>
     <div class="vid-grid">
       <!-- data-src: archivo (video/proyecto1.mp4) o enlace de YouTube/Vimeo. Vacío = "Próximamente" -->
-      <article class="vid" data-src="video/servicio-menor-faja.mp4" data-poster="">
+      <article class="vid" data-src="https://vimeo.com/1249908493" data-poster="" data-vertical>
         <div class="vid-frame"><button class="vid-play" type="button" aria-label="Reproducir video 1"><span></span></button><em class="vid-soon">Video próximamente</em></div>
         <div class="vid-body"><span class="chip">Taller mecánico</span><h3>Servicio menor y cambio de faja</h3><p>Video para mostrar el trabajo del taller y generar confianza con casos de éxito, en formato testimonial.</p></div>
       </article>
-      <article class="vid" data-src="video/proyecto-2.mp4" data-poster="">
+      <article class="vid" data-src="https://vimeo.com/1249909051" data-poster="" data-vertical>
         <div class="vid-frame"><button class="vid-play" type="button" aria-label="Reproducir video 2"><span></span></button><em class="vid-soon">Video próximamente</em></div>
         <div class="vid-body"><span class="chip">Bebidas · Producto</span><h3>Video de producto: latas de bebida</h3><p>Toma de producto, pensada para dar a conocer los nuevos sabores de las bebidas de manera interactiva.</p></div>
       </article>
-      <article class="vid" data-src="video/proyecto-3.mp4" data-poster="">
+      <article class="vid" data-src="https://vimeo.com/1249909052" data-poster="" data-vertical>
         <div class="vid-frame"><button class="vid-play" type="button" aria-label="Reproducir video 3"><span></span></button><em class="vid-soon">Video próximamente</em></div>
         <div class="vid-body"><span class="chip">Eventos</span><h3>Salón para eventos</h3><p>Muestra las instalaciones y los eventos del salón: todo en un solo lugar, sin buscar proveedores.</p></div>
       </article>
@@ -307,8 +307,22 @@
     const src = (v.dataset.src || '').trim(), poster = (v.dataset.poster || '').trim();
     const frame = v.querySelector('.vid-frame'), btn = v.querySelector('.vid-play');
     if (poster) frame.style.backgroundImage = 'url("' + poster + '")';
+    // YouTube: los Shorts son verticales y usan la miniatura del propio video como portada
+    const short = src.match(/youtube\.com\/shorts\/([\w-]{11})/);
+    if (short) { v.classList.add('vertical'); if (!poster) frame.style.backgroundImage = 'url("https://i.ytimg.com/vi/' + short[1] + '/hqdefault.jpg")'; }
     if (!src) { v.classList.add('soon'); btn.disabled = true; return; }
     v.querySelector('.vid-soon').remove();
+    if (v.hasAttribute('data-vertical')) v.classList.add('vertical');
+    // Vimeo: se muestra su reproductor desde el inicio, sin título ni autor (un solo toque para reproducir)
+    const vimeo = src.match(/vimeo\.com\/(\d+)/);
+    if (vimeo) {
+      const fr = document.createElement('iframe');
+      fr.src = 'https://player.vimeo.com/video/' + vimeo[1] + '?title=0&byline=0&portrait=0&badge=0&playsinline=1&dnt=1';
+      fr.allow = 'autoplay; fullscreen; picture-in-picture'; fr.allowFullscreen = true; fr.loading = 'lazy';
+      fr.title = v.querySelector('h3').textContent;
+      frame.innerHTML = ''; frame.appendChild(fr); frame.classList.add('playing');
+      return;
+    }
     if (/\.(mp4|webm|mov)$/i.test(src)) {
       // Archivo propio: se muestra el primer cuadro con controles
       const el = document.createElement('video');
@@ -325,7 +339,7 @@
       const vm = src.match(/vimeo\.com\/(\d+)/);
       if (yt || vm) {
         el = document.createElement('iframe');
-        el.src = yt ? 'https://www.youtube-nocookie.com/embed/' + yt[1] + '?autoplay=1&rel=0' : 'https://player.vimeo.com/video/' + vm[1] + '?autoplay=1';
+        el.src = yt ? 'https://www.youtube-nocookie.com/embed/' + yt[1] + '?autoplay=1&rel=0&playsinline=1&controls=0&iv_load_policy=3&loop=1&playlist=' + yt[1] : 'https://player.vimeo.com/video/' + vm[1] + '?autoplay=1';
         el.allow = 'autoplay; fullscreen; picture-in-picture'; el.allowFullscreen = true; el.title = 'Video del proyecto';
       } else {
         el = document.createElement('video');
