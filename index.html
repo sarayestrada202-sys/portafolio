@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sara Estrada | Portafolio de marketing digital</title>
+  <meta name="description" content="Sara Estrada, marketing digital estratégico: campañas en Meta Ads, redes sociales, sitios en WordPress y contenido en video.">
+  <meta name="theme-color" content="#2E1519">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_LA">
+  <meta property="og:title" content="Sara Estrada | Portafolio de marketing digital">
+  <meta property="og:description" content="Marketing digital estratégico: campañas en Meta Ads para negocios que lanzan su primera publicidad.">
+  <meta property="og:url" content="https://sarayestrada202-sys.github.io/portafolio/">
+  <meta property="og:image" content="https://sarayestrada202-sys.github.io/portafolio/img/og-imagen.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <noscript><style>.reveal{opacity:1!important;transform:none!important}</style></noscript>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Antonio:wght@600;700&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+
+<!-- ===== HEADER ===== -->
+<header class="site-header">
+  <div class="container nav">
+    <a href="#inicio" class="brand" aria-label="Inicio"><span class="brand-mark">SE</span><span class="brand-name">Sara Estrada</span></a>
+    <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false" onclick="this.setAttribute('aria-expanded', this.getAttribute('aria-expanded')!=='true');document.querySelector('.nav-links').classList.toggle('open')"><span></span><span></span><span></span></button>
+    <nav class="nav-links" aria-label="Principal">
+      <a href="#sobre-mi">Sobre mí</a>
+      <a href="#skills">Skills</a>
+      <a href="#videos">Videos</a>
+      <a href="#proceso">Cómo trabajo</a>
+      <a href="#hablemos" class="btn btn-gold btn-sm">Hablemos</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<!-- ===== PORTADA ===== -->
+<section class="hero" id="inicio">
+  <span class="ring ring-a" aria-hidden="true"></span>
+  <span class="ring ring-b" aria-hidden="true"></span>
+  <div class="container hero-inner">
+    <div class="hero-block">
+      <h1 class="hero-title" aria-label="Portafolio">
+        <span class="ht-line" aria-hidden="true">Porta</span>
+        <span class="ht-line ht-2" aria-hidden="true">fo<span class="ht-L">l</span>io<svg class="ht-tail ht-o" viewBox="0 0 60 40"><path pathLength="1" d="M2 36 C20 32 40 28 56 6"/></svg></span>
+        <i class="ht-link" aria-hidden="true"></i>
+      </h1>
+      <p class="hero-sub"><strong>Sara Estrada</strong> - Marketing digital estratégico</p>
+    </div>
+    <div class="hero-cta">
+      <a href="#videos" class="btn btn-gold">Ver proyectos</a>
+      <a href="#hablemos" class="btn btn-ghost">Hablemos</a>
+    </div>
+  </div>
+  <!-- Personaje recostado sobre el borde inferior de la portada -->
+  <img class="hero-mascot" src="img/personaje.webp" alt="Ilustración de Sara recostada sobre sus brazos, sonriendo" width="720" height="744" decoding="async">
+</section>
+
+<!-- ===== CINTA QUE CORRE: ABOUT ME (entre la portada y Sobre mí) ===== -->
+<div class="marquee-band" aria-hidden="true">
+  <div class="marquee-track">
+    <div class="marquee-inner">
+      <!-- primera mitad -->
+      <span class="marquee-item">About me</span>
+      <span class="marquee-item">About me</span>
+      <span class="marquee-item">About me</span>
+      <span class="marquee-item">About me</span>
+      <span class="marquee-item">About me</span>
+      <span class="marquee-item">About me</span>
+      <span class="marquee-item">About me</span>
+      <span class="marquee-item">About me</span>
+      <span class="marquee-item">About me</span>
+      <span class="marquee-item">About me</span>
+      <span class="marquee-item">About me</span>
+      <span class="marquee-item">About me</span>
+      <!-- copia exacta: así el reinicio en -50% no se nota -->
+      <span class="marquee-item">About me</span>
+      <span class="marquee-item">About me</span>
+      <span class="marquee-item">About me</span>
+      <span class="marquee-item">About me</span>
+      <span class="marquee-item">About me</span>
+      <span class="marquee-item">About me</span>
+      <span class="marquee-item">About me</span>
+      <span class="marquee-item">About me</span>
+      <span class="marquee-item">About me</span>
+      <span class="marquee-item">About me</span>
+      <span class="marquee-item">About me</span>
+      <span class="marquee-item">About me</span>
+    </div>
+  </div>
+</div>
+
+<!-- ===== SOBRE MI ===== -->
+<section class="about" id="sobre-mi">
+  <div class="container about-grid reveal">
+    <div class="badge-wrap">
+      <!-- Cinta (color Cherry Cocoa) que cuelga desde el borde de la sección, con argolla en D -->
+      <svg class="lanyard" viewBox="0 0 250 190" aria-hidden="true">
+        <defs>
+          <linearGradient id="silver" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F7F5F8"/><stop offset=".45" stop-color="#A9A6AE"/><stop offset="1" stop-color="#E4E1E7"/></linearGradient>
+          <pattern id="weave" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="6" height="6" fill="#46232A"/><rect width="3" height="6" fill="#52303A" opacity=".55"/></pattern>
+        </defs>
+        <rect x="93" y="-4" width="64" height="130" fill="url(#weave)"/>
+        <rect x="93" y="-4" width="7" height="130" fill="#2E1519" opacity=".35"/><rect x="150" y="-4" width="7" height="130" fill="#2E1519" opacity=".35"/>
+        <path d="M100 -4 V122 M150 -4 V122" stroke="#FEB3C4" stroke-width="1.4" stroke-dasharray="5 4" fill="none" opacity=".75"/>
+        <rect x="90" y="96" width="70" height="26" fill="#3A1C22"/><rect x="90" y="96" width="70" height="3" fill="#2E1519" opacity=".6"/>
+        <path d="M86 112 H164 V132 A39 20 0 0 1 86 132 Z" fill="none" stroke="url(#silver)" stroke-width="6" stroke-linejoin="round"/>
+        <path d="M86 112 H164" stroke="url(#silver)" stroke-width="6" stroke-linecap="round"/>
+      </svg>
+      <div class="badge-drop">
+        <div class="badge-swing">
+          <!-- Broche giratorio metálico -->
+          <svg class="clasp" viewBox="0 0 50 96" aria-hidden="true">
+            <circle cx="25" cy="9" r="7" fill="none" stroke="url(#silver)" stroke-width="3.2"/>
+            <rect x="18.5" y="15" width="13" height="44" rx="6.5" fill="url(#silver)" stroke="#8F8C95" stroke-width=".8"/>
+            <rect x="22.5" y="22" width="5" height="26" rx="2.5" fill="#6B6872" opacity=".55"/>
+            <path d="M25 56 V74 C25 88 41 88 41 76" fill="none" stroke="url(#silver)" stroke-width="5" stroke-linecap="round"/>
+          </svg>
+          <figure class="badge-card">
+            <span class="badge-slot" aria-hidden="true"></span>
+            <div class="badge-photo"><img src="img/foto-sara.webp" alt="Sara Estrada" width="800" height="1066" decoding="async"></div>
+            <figcaption><strong>Sara Estrada</strong><span>Marketing digital estratégico</span></figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+    <div class="about-text">
+      <!-- Flecha dibujada a mano que baja hacia el texto (solo en pantallas anchas) -->
+      <svg class="hello-arrow" viewBox="0 0 48 96" aria-hidden="true"><path pathLength="1" d="M36 6 C8 20 2 56 24 86"/><path pathLength="1" d="M24 86 L11 79 M24 86 L28 71"/></svg>
+      <h2 class="hello">
+        <span class="hello-line">¡Hola
+          <button class="wave" type="button" aria-label="Saludar con la mano">
+            <svg viewBox="0 0 64 64" aria-hidden="true">
+              <g class="wave-lines"><path d="M52 8 C57 10 60 14 61 19"/><path d="M48 3 C56 5 62 11 63 20"/><path d="M6 12 C3 15 2 19 2 23"/></g>
+              <g class="wave-hand">
+                <rect x="9" y="30" width="9" height="22" rx="4.5" transform="rotate(-38 13.5 41)" fill="#F08FA8"/>
+                <rect x="40" y="13" width="9" height="30" rx="4.5" transform="rotate(8 44.5 28)" fill="#F08FA8"/>
+                <rect x="17" y="10" width="9" height="32" rx="4.5" transform="rotate(-8 21.5 26)" fill="#FEB3C4"/>
+                <rect x="26" y="5" width="9" height="36" rx="4.5" fill="#FEB3C4"/>
+                <rect x="33" y="8" width="9" height="34" rx="4.5" transform="rotate(4 37.5 25)" fill="#FEB3C4"/>
+                <rect x="14" y="30" width="34" height="28" rx="13" fill="#FEB3C4"/>
+              </g>
+            </svg>
+          </button>
+        </span>
+        <span class="hello-line">Soy <mark>Sara!</mark></span>
+      </h2>
+      <p>Soy <strong>Sara Estrada</strong> y me apasiona el <strong>marketing digital</strong>. Me formé como <strong>Perito Contador</strong> y entendí que detrás de cada número hay un negocio que necesita conectar con sus clientes. Desde <strong>2024</strong> gestiono <strong>campañas en Meta Ads, redes sociales, sitios en WordPress y contenido en video</strong>, y he acompañado negocios desde talleres mecánicos hasta proyectos digitales.</p>
+      <p class="about-solution">Me enfoco en <strong>campañas de Meta Ads</strong> con estrategia. Parto de la <strong>identidad de tu marca</strong> para encontrar a tu <strong>cliente ideal</strong> y mostrarle el mensaje correcto, con el contenido que cada campaña necesita. Así llegan <strong>más ventas</strong> y una <strong>comunidad</strong> que te sigue, te recomienda y vuelve a comprar.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== EDUCACION ===== -->
+<section class="education" id="educacion">
+  <div class="container edu-grid reveal">
+    <div>
+      <h2>Formación</h2>
+      <div class="edu-item">
+        <p class="degree">Licenciatura en Administración de Empresas</p>
+        <p class="muted">Universidad Mariano Gálvez<br>4.º semestre aprobado · estudios en curso</p>
+      </div>
+      <div class="edu-item">
+        <p class="degree">Perito Contador</p>
+        <p class="muted">Escuela Nacional de Ciencias Comerciales de Amatitlán<br>2018 – 2020</p>
+      </div>
+    </div>
+    <div>
+      <h2>Certificaciones</h2>
+      <ul class="certs">
+        <li>Marketing para Meta Ads <span>Udemy</span></li>
+        <li>Marketing digital <span>Google</span></li>
+        <li>Curso de SEO y posicionamiento en Google <span>Udemy</span></li>
+        <li>WordPress <span>Udemy</span></li>
+        <li>Experiencia de usuario UX/UI <span>Udemy</span></li>
+        <li>Figma <span>Udemy</span></li>
+        <li>Gestión de datos con Excel <span>Cámara de Comercio y Capacitación Internacional</span></li>
+        <li>Ruta Digital <span>Daniela Montenegro</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===== HABLEMOS ===== -->
+<section class="talk" id="hablemos">
+  <div class="container reveal">
+    <h2 class="center">¡Hablemos!</h2>
+    <div class="talk-grid">
+      <a class="talk-card" href="https://wa.me/50237777519?text=Hola%20Sara%2C%20vi%20tu%20portafolio%20y%20me%20gustar%C3%ADa%20conversar%20sobre%20mi%20proyecto."><span class="tag">WhatsApp</span><span>+502 3777 7519</span></a>
+      <a class="talk-card" href="mailto:saraestradamarketing@gmail.com"><span class="tag">Correo</span><span>saraestradamarketing@gmail.com</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ESPECIALIDADES + HERRAMIENTAS ===== -->
+<section class="panel-wrap" id="skills">
+  <div class="container">
+    <div class="panel reveal">
+      <span class="ring ring-c" aria-hidden="true"></span>
+      <div class="panel-row">
+        <h2>Skills</h2>
+        <ul class="pills">
+          <li>Estrategia digital</li>
+          <li>Publicidad en Meta Ads</li>
+          <li>Google Ads y SEO</li>
+          <li>Redes sociales</li>
+          <li>Analítica y reportes</li>
+          <li>Contenido y marca</li>
+          <li>Copywriting para anuncios</li>
+          <li>Segmentación de público</li>
+        </ul>
+      </div>
+      <div class="panel-row">
+        <h2>Herramientas</h2>
+        <ul class="tools">
+          <li><span class="tool t1" style="--logo:url('img/logos/meta.svg')" aria-hidden="true"></span>Meta Business Suite</li>
+          <li><span class="tool t2" style="--logo:url('img/logos/meta.svg')" aria-hidden="true"></span>Meta Ads Manager</li>
+          <li><span class="tool t3" style="--logo:url('img/logos/crm.svg')" aria-hidden="true"></span>CRM</li>
+          <li><span class="tool t4" style="--logo:url('img/logos/canva.svg')" aria-hidden="true"></span>Canva</li>
+          <li><span class="tool t5" style="--logo:url('img/logos/claude.svg')" aria-hidden="true"></span>Claude</li>
+          <li><span class="tool t6" style="--logo:url('img/logos/edits.svg')" aria-hidden="true"></span>Edits</li>
+          <li><span class="tool t7" style="--logo:url('img/logos/wordpress.svg')" aria-hidden="true"></span>WordPress</li>
+          <li><span class="tool t8" style="--logo:url('img/logos/figma.svg')" aria-hidden="true"></span>Figma</li>
+          <li><span class="tool t9" style="--logo:url('img/logos/microsoft.svg')" aria-hidden="true"></span>Microsoft 365</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== RESULTADOS ===== -->
+<section class="results">
+  <div class="container reveal">
+    <h2 class="center">Resultados que me respaldan</h2>
+    <p class="center muted">Resultados de campañas en solo 2 meses de uno de mis clientes · Datos de Meta Ads Manager.</p>
+    <div class="kpis">
+      <div class="kpi"><strong>4,485</strong><span>Conversaciones generadas por mensaje</span></div>
+      <div class="kpi"><strong>Q7.31</strong><span>Costo más bajo por conversación</span></div>
+      <div class="kpi"><strong>2.5 M</strong><span>Impresiones en total</span></div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ===== VIDEOS ===== -->
+<section class="videos" id="videos">
+  <div class="container reveal">
+    <h2 class="center">Mis proyectos en video</h2>
+    <p class="center muted vid-sub">Dale play y mira cómo se ven en acción.</p>
+    <div class="vid-grid">
+      <!-- data-src: archivo (video/proyecto1.mp4) o enlace de YouTube/Vimeo. Vacío = "Próximamente" -->
+      <article class="vid" data-src="video/servicio-menor-faja.mp4" data-poster="">
+        <div class="vid-frame"><button class="vid-play" type="button" aria-label="Reproducir video 1"><span></span></button><em class="vid-soon">Video próximamente</em></div>
+        <div class="vid-body"><span class="chip">Taller mecánico</span><h3>Servicio menor y cambio de faja</h3><p>Video para mostrar el trabajo del taller y generar confianza con casos de éxito, en formato testimonial.</p></div>
+      </article>
+      <article class="vid" data-src="video/proyecto-2.mp4" data-poster="">
+        <div class="vid-frame"><button class="vid-play" type="button" aria-label="Reproducir video 2"><span></span></button><em class="vid-soon">Video próximamente</em></div>
+        <div class="vid-body"><span class="chip">Bebidas · Producto</span><h3>Video de producto: latas de bebida</h3><p>Toma de producto, pensada para dar a conocer los nuevos sabores de las bebidas de manera interactiva.</p></div>
+      </article>
+      <article class="vid" data-src="video/proyecto-3.mp4" data-poster="">
+        <div class="vid-frame"><button class="vid-play" type="button" aria-label="Reproducir video 3"><span></span></button><em class="vid-soon">Video próximamente</em></div>
+        <div class="vid-body"><span class="chip">Eventos</span><h3>Salón para eventos</h3><p>Muestra las instalaciones y los eventos del salón: todo en un solo lugar, sin buscar proveedores.</p></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== COMO TRABAJO ===== -->
+<section class="process" id="proceso">
+  <div class="container reveal">
+    <h2 class="center">Cómo trabajo</h2>
+    <ol class="steps">
+      <li><span class="num">1</span><h3>Diagnóstico</h3><p>Entiendo el negocio, la audiencia y los números de partida.</p></li>
+      <li><span class="num">2</span><h3>Estrategia</h3><p>Defino objetivos, canales, mensajes y presupuesto.</p></li>
+      <li><span class="num">3</span><h3>Ejecución</h3><p>Lanzo campañas y contenido con pruebas continuas.</p></li>
+      <li><span class="num">4</span><h3>Medición</h3><p>Reporto resultados claros y optimizo cada semana.</p></li>
+    </ol>
+  </div>
+</section>
+
+</main>
+
+<a class="wa-float" id="waFloat" href="#hablemos" target="_blank" rel="noopener" aria-label="Escríbeme por WhatsApp">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2z" fill="currentColor"/><circle cx="8" cy="12" r="1.3" fill="#FEB3C4"/><circle cx="12" cy="12" r="1.3" fill="#FEB3C4"/><circle cx="16" cy="12" r="1.3" fill="#FEB3C4"/></svg>
+  <span>Escríbeme</span>
+</a>
+
+<footer class="site-footer">
+  <div class="container foot">
+    <span>© 2026 Sara Yazmin Estrada Escobar · Marketing digital</span>
+    <a href="#inicio">Volver arriba ↑</a>
+  </div>
+</footer>
+
+<script>
+  // Aparición suave al hacer scroll
+  const io = 'IntersectionObserver' in window ? new IntersectionObserver((es) => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: .12 }) : null;
+  document.querySelectorAll('.reveal').forEach(el => io ? io.observe(el) : el.classList.add('in'));
+
+  // Videos: se cargan solo al dar play (la página carga rápido)
+  document.querySelectorAll('.vid').forEach(v => {
+    const src = (v.dataset.src || '').trim(), poster = (v.dataset.poster || '').trim();
+    const frame = v.querySelector('.vid-frame'), btn = v.querySelector('.vid-play');
+    if (poster) frame.style.backgroundImage = 'url("' + poster + '")';
+    if (!src) { v.classList.add('soon'); btn.disabled = true; return; }
+    v.querySelector('.vid-soon').remove();
+    if (/\.(mp4|webm|mov)$/i.test(src)) {
+      // Archivo propio: se muestra el primer cuadro con controles
+      const el = document.createElement('video');
+      el.src = src; el.controls = true; el.preload = 'metadata'; el.playsInline = true;
+      el.addEventListener('loadedmetadata', () => { if (el.videoHeight > el.videoWidth) v.classList.add('vertical'); });
+      frame.innerHTML = ''; frame.appendChild(el); frame.classList.add('playing');
+      return;
+    }
+    btn.addEventListener('click', () => {
+      let el;
+      const yt = src.match(/(?:youtu\.be\/|youtube\.com\/(?:watch\?v=|shorts\/|embed\/))([\w-]{11})/);
+      const vm = src.match(/vimeo\.com\/(\d+)/);
+      if (yt || vm) {
+        el = document.createElement('iframe');
+        el.src = yt ? 'https://www.youtube-nocookie.com/embed/' + yt[1] + '?autoplay=1&rel=0' : 'https://player.vimeo.com/video/' + vm[1] + '?autoplay=1';
+        el.allow = 'autoplay; fullscreen; picture-in-picture'; el.allowFullscreen = true; el.title = 'Video del proyecto';
+      } else {
+        el = document.createElement('video');
+        el.src = src; el.controls = true; el.autoplay = true; el.playsInline = true;
+      }
+      frame.innerHTML = ''; frame.appendChild(el); frame.classList.add('playing');
+    });
+  });
+  // Contadores: las cifras suben desde 0 cuando llegan a pantalla
+  function countUp(el) {
+    const m = el.textContent.trim().match(/^(\D*?)(\d[\d,]*(?:\.\d+)?)(\D*)$/);
+    if (!m) return;
+    const pre = m[1], raw = m[2], comma = raw.includes(","), num = raw.replace(/,/g, ""), suf = m[3], target = parseFloat(num);
+    const dec = (num.split('.')[1] || '').length, pad = num.split('.')[0].length;
+    if (!target || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    const t0 = performance.now(), dur = 1600;
+    const fmt = v => pre + (dec ? v.toFixed(dec) : comma ? Math.round(v).toLocaleString('en-US') : String(Math.round(v)).padStart(pad, '0')) + suf;
+    (function tick(t) {
+      const p = Math.min((t - t0) / dur, 1), e = 1 - Math.pow(1 - p, 3);
+      el.textContent = fmt(target * e);
+      if (p < 1) requestAnimationFrame(tick); else el.textContent = fmt(target);
+    })(t0);
+  }
+  window.countUp = countUp;
+  const kio = 'IntersectionObserver' in window ? new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { countUp(e.target); kio.unobserve(e.target); } }), { threshold: .6 }) : null;
+  if (kio) document.querySelectorAll('.kpi strong').forEach(el => kio.observe(el));
+
+  // Botón flotante de WhatsApp: aparece al salir de la portada
+  const wa = document.getElementById('waFloat'), waSrc = document.querySelector('.talk-card[href^="https://wa.me"]');
+  if (wa && waSrc) wa.href = waSrc.href;
+  const heroEl = document.getElementById('inicio');
+  if (wa && heroEl && 'IntersectionObserver' in window) {
+    new IntersectionObserver(es => es.forEach(e => wa.classList.toggle('show', !e.isIntersecting)), { threshold: 0, rootMargin: '-120px 0px 0px 0px' }).observe(heroEl);
+  }
+  const contactEl = document.getElementById('hablemos');
+  if (wa && contactEl && 'IntersectionObserver' in window) {
+    new IntersectionObserver(es => es.forEach(e => wa.classList.toggle('hide', e.isIntersecting)), { threshold: 0.25 }).observe(contactEl);
+  }
+
+
+  // Título del hero: la T de PORTA baja y se une a la L de FOLIO con medidas reales de la letra
+  (function () {
+    const title = document.querySelector('.hero-title');
+    if (!title) return;
+    const lines = title.querySelectorAll('.ht-line'), link = title.querySelector('.ht-link');
+    if (lines.length < 2 || !link) return;
+    // Animación de entrada: cada letra aparece una tras otra (fundido de izquierda a derecha)
+    let n = 0;
+    lines.forEach((line, li) => {
+      const text = line.textContent.trim(), keep = [...line.querySelectorAll('svg')];
+      line.textContent = '';
+      text.split('').forEach((c, i) => {
+        const b = document.createElement('b');
+        b.className = 'ch' + (li === 1 && i === 2 ? ' ht-L' : '');
+        b.textContent = c;
+        b.style.animationDelay = (0.25 + n * 0.08).toFixed(2) + 's'; n++;
+        line.appendChild(b);
+      });
+      keep.forEach(sv => line.appendChild(sv));
+    });
+    function align() {
+      const fs = parseFloat(getComputedStyle(lines[0]).fontSize);
+      const ff = '600 400px Antonio';
+      const cv = document.createElement('canvas'); cv.width = 700; cv.height = 700;
+      const cx = cv.getContext('2d', { willReadFrequently: true });
+      cx.font = ff; cx.textBaseline = 'alphabetic';
+      const m = cx.measureText('T'), asc = m.fontBoundingBoxAscent / 400, capH = m.actualBoundingBoxAscent / 400;
+      // Ancho y posición del palo (a una altura intermedia de la letra) medidos en píxeles
+      function stem(ch) {
+        cx.clearRect(0, 0, 700, 700); cx.fillStyle = '#000'; cx.fillText(ch, 100, 500);
+        const y = Math.round(500 - 0.35 * 400), d = cx.getImageData(0, y, 700, 1).data; let l = -1, r = -1;
+        for (let x = 0; x < 700; x++) { if (d[x * 4 + 3] > 128) { if (l < 0) l = x; r = x + 1; } }
+        return { l: (l - 100) / 400, r: (r - 100) / 400 };
+      }
+      const sT = stem('T'), sL = stem('L');
+      const tr = title.getBoundingClientRect();
+      function charRect(line, idx) { return line.querySelectorAll('.ch')[idx].getBoundingClientRect(); }
+      const rT = charRect(lines[0], 3), rL = lines[1].querySelector('.ht-L').getBoundingClientRect();
+      const pad = parseFloat(getComputedStyle(lines[1]).paddingLeft) / fs;
+      const Tc = (rT.left - tr.left) / fs + (sT.l + sT.r) / 2;
+      const Lc = (rL.left - tr.left) / fs + (sL.l + sL.r) / 2;
+      const ind = pad + (Tc - Lc);
+      title.style.setProperty('--ind', ind.toFixed(4) + 'em');
+      // Pieza de unión: mismo ancho que el palo de la T, entre la base de PORTA y la parte alta de FOLIO
+      // Medidas verticales por maquetación (no cambian mientras corre la animación de entrada)
+      const desc = m.fontBoundingBoxDescent / 400, lh = parseFloat(getComputedStyle(lines[0]).lineHeight) / fs, half = (lh - (asc + desc)) / 2;
+      const base1 = lines[0].offsetTop / fs + half + asc, capTop2 = lines[1].offsetTop / fs + half + asc - capH;
+      const w = Math.max(sT.r - sT.l, sL.r - sL.l) + 0.012; // un pelo más ancha que el palo para tapar el suavizado de los bordes
+      link.style.setProperty('--lk-left', (Tc - w / 2).toFixed(4) + 'em');
+      link.style.setProperty('--lk-w', w.toFixed(4) + 'em');
+      link.style.setProperty('--lk-top', (base1 - 0.06).toFixed(4) + 'em');
+      link.style.setProperty('--lk-h', (capTop2 - base1 + 0.12).toFixed(4) + 'em');
+    }
+    (document.fonts && document.fonts.load ? document.fonts.load('600 100px Antonio') : Promise.resolve()).then(() => document.fonts.ready).then(align).catch(() => {});
+  })();
+
+  // Manita que saluda: una vez al aparecer la sección, y de nuevo al pasar el mouse, tocarla o con el teclado
+  (function () {
+    const btn = document.querySelector('.wave');
+    if (!btn) return;
+    const wave = () => { btn.classList.remove('waving'); void btn.offsetWidth; btn.classList.add('waving'); };
+    ['mouseenter', 'click', 'focus'].forEach(ev => btn.addEventListener(ev, wave));
+    if ('IntersectionObserver' in window) {
+      const o = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { setTimeout(wave, 500); o.disconnect(); } }), { threshold: 0.5 });
+      o.observe(btn);
+    }
+  })();
+
+  // Gafete: se balancea solo, y al pasar el mouse o tocarlo se mece con más fuerza
+  (function () {
+    const sw = document.querySelector('.badge-swing');
+    if (!sw) return;
+    let busy = false;
+    const kick = () => {
+      if (busy) return; busy = true;
+      sw.classList.remove('kick'); void sw.offsetWidth; sw.classList.add('kick');
+      sw.addEventListener('animationend', () => { sw.classList.remove('kick'); busy = false; }, { once: true });
+    };
+    sw.addEventListener('pointerenter', kick);
+    sw.addEventListener('click', kick);
+  })();
+
+  document.querySelectorAll('.nav-links a').forEach(a => a.addEventListener('click', () => document.querySelector('.nav-links').classList.remove('open')));
+</script>
+</body>
+</html>
