@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex"><title>Prueba de video</title>
+<link rel="stylesheet" href="styles.css">
+<style>body{padding:16px;font-family:sans-serif;background:#fff;color:#000}h2{margin:22px 0 6px;font-size:1.1rem}.t{max-width:300px}.t video{width:100%;background:#000}</style></head><body>
+<h2>A) Video solo, sin estilos de la pagina</h2>
+<div class="t"><video src="video/servicio-menor-faja.mp4" controls playsinline preload="metadata"></video></div>
+<h2>B) Video con estructura y estilos del portafolio</h2>
+<div class="vid vertical" style="max-width:300px"><div class="vid-frame playing"><video src="video/servicio-menor-faja.mp4" controls playsinline preload="metadata"></video></div></div>
+<h2>C) Video creado con JavaScript (como en la pagina)</h2>
+<div id="c" class="vid vertical" style="max-width:300px"><div class="vid-frame playing" id="cf"></div></div>
+<h2>D) Video sin precarga</h2>
+<div class="t"><video src="video/proyecto-2.mp4" controls playsinline preload="none"></video></div>
+<script>
+const el=document.createElement('video');el.controls=true;el.playsInline=true;el.preload='metadata';
+const s=document.createElement('source');s.src='video/proyecto-3.mp4';s.type='video/mp4';el.appendChild(s);
+document.getElementById('cf').appendChild(el);
+</script></body></html>
