@@ -312,7 +312,9 @@
     if (/\.(mp4|webm|mov)$/i.test(src)) {
       // Archivo propio: se muestra el primer cuadro con controles
       const el = document.createElement('video');
-      el.src = src + '#t=0.1'; el.controls = true; el.preload = 'metadata'; el.playsInline = true; el.setAttribute('playsinline', '');
+      el.controls = true; el.preload = 'metadata'; el.playsInline = true; el.muted = false;
+      el.setAttribute('playsinline', ''); el.setAttribute('webkit-playsinline', '');
+      const so = document.createElement('source'); so.src = src; so.type = 'video/mp4'; el.appendChild(so);
       el.addEventListener('loadedmetadata', () => { if (el.videoHeight > el.videoWidth) v.classList.add('vertical'); });
       frame.innerHTML = ''; frame.appendChild(el); frame.classList.add('playing');
       return;

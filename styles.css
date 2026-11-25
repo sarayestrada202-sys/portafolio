@@ -150,7 +150,7 @@ section { position: relative; }
 .videos h2 { font-size: clamp(1.8rem, 3.4vw, 2.4rem); font-weight: 700; margin-bottom: 26px; }
 .videos .vid-sub { margin: -14px 0 28px; font-size: .9rem; }
 .vid-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
-.vid { background: var(--white); border-radius: var(--radius); overflow: hidden; box-shadow: 0 8px 26px rgba(70, 35, 42, .08); }
+.vid { background: var(--white); border-radius: var(--radius); box-shadow: 0 8px 26px rgba(70, 35, 42, .08); }
 .vid-frame { position: relative; aspect-ratio: 16 / 9; background: linear-gradient(135deg, var(--cocoa), var(--cocoa-soft)) center / cover; display: grid; place-items: center; }
 .vid-frame iframe, .vid-frame video { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; background: #000; }
 .vid-play { width: 68px; height: 68px; border: 0; border-radius: 50%; background: var(--olive); cursor: pointer; display: grid; place-items: center; box-shadow: 0 8px 22px rgba(0, 0, 0, .3); transition: transform .2s; }
@@ -399,3 +399,7 @@ section { position: relative; }
 /* Título ya animado: texto estático y nítido (evita desajustes de subpíxel en Safari/iPhone) */
 .hero .hero-title.done .ch { animation: none; opacity: 1; }
 .hero .hero-title { text-rendering: geometricPrecision; -webkit-font-smoothing: antialiased; }
+
+/* Videos: el redondeo va en el propio video (Safari/iPhone no reproduce bien dentro de un contenedor recortado) */
+.vid.vertical .vid-frame { overflow: visible; }
+.vid-frame video { border-radius: 14px; }
